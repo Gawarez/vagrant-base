@@ -16,6 +16,14 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.memory = 1024
     vb.cpus = 1
+
+    vb.customize ["createhd", "--filename", "disk1.vdi", "--size", 10240]
+    vb.customize ["storageattach", :id, 
+                  "--storagectl", "SATA Controller", 
+                  "--port", 1, 
+                  "--device", 0, 
+                  "--type", "hdd", 
+                  "--medium", "disk1.vdi"]
   end
 
   config.vm.synced_folder "./share", "/share"
