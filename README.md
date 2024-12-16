@@ -11,3 +11,4 @@ VM **Ubuntu 24.04** usando provider **VirtualBox** e uma synced folder na `/shar
 - Script de instalação do Docker + colocar user no grupo
 - Script que instala o [fzf](https://github.com/junegunn/fzf), `ranger` e `ncdu`
 - Script de instalação e configuração da Kubernetes engine com [K3s](https://k3s.io/), [Helm](https://helm.sh/) para charts e [K9s](https://k9scli.io/) para gerenciar o node
+- Script que baixa e configura o [yazi](https://yazi-rs.github.io/) com o wrapper do bash
